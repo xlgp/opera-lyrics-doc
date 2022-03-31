@@ -14,7 +14,7 @@ export const useNameListStore = defineStore('namelist', {
     },
     actions: {
         async fetchNameList() {
-            let data = await Api.nameList();
+            let data = await Api.nameList() as unknown as string[];
             this.data = nameList(data);
         }
     },

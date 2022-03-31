@@ -1,6 +1,6 @@
 import { decode } from 'js-base64';
 
-export let nameList = (list:[string])=>{
+export let nameList = (list:string[])=>{
     let juZhong:any = {};
     list.forEach(element => {
         if(!element.startsWith('./')) return false; //终止本次循环
@@ -15,7 +15,7 @@ export let nameList = (list:[string])=>{
     return juZhong;
 }
 
-export default (data: object) => {
+export default (data: any) => {
     if(data && data.content){
         let content = decode(data.content);
         return content.split('\n');

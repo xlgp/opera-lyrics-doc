@@ -1,0 +1,1 @@
+import{K as t,o as s,i as c}from"./vendor.be61591f.js";import{_ as o}from"./index.1e9c8449.js";const r={};function n(_,a){const e=t;return s(),c(e,{icon:"success",title:"\u620F\u66F2\u5531\u8BCD\u5217\u8868","sub-title":"\u5DE6\u4FA7\u9009\u62E9"})}var u=o(r,[["render",n]]);export{u as default};

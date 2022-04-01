@@ -1,4 +1,4 @@
 export default {
     BASE_URL: 'https://gitee.com/api/v5/repos/xlgp/opera-lyrics/contents/',
-    GITEE_ACCESS_TOKEN: 'd62123e28ad0c72d2cd5c3dda899d902'
+    GITEE_ACCESS_TOKEN: 'a08de9c4e4ccc4154a4ea64880141481'
 }

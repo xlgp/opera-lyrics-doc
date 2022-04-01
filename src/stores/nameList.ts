@@ -2,10 +2,14 @@ import { defineStore } from 'pinia'
 import { nameList } from '../utils/parseGiteeData';
 import Api from '../api/gitee'
 
+interface DataType{
+    [key:string]:Array<string>
+}
+
 export const useNameListStore = defineStore('namelist', {
     state: () => {
         return {
-            data: [],
+            data: {} as DataType,
         }
     },
     getters: {

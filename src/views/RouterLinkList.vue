@@ -7,19 +7,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from '@vue/reactivity';
+import { computed } from '@vue/reactivity';
 
 const props = defineProps({
     data: Array,
     parent: String
 })
 
-
 const { data, parent } = props;
 
 const path = computed(() => '/' + parent + '/');
-
-const isActive = ref(false);
 
 </script>
 

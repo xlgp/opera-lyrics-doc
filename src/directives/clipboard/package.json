@@ -1,0 +1,27 @@
+{
+  "name": "vue3-clipboard-v",
+  "version": "1.0.1",
+  "description": "use clipboard with vue3",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.10",
+    "vue": "^3.2.25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlgp/vue3-clipboard.git"
+  },
+  "keywords": [
+    "vue3",
+    "clipboard.js"
+  ],
+  "author": "xlgp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xlgp/vue3-clipboard/issues"
+  },
+  "homepage": "https://github.com/xlgp/vue3-clipboard#readme"
+}

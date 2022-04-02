@@ -1,10 +1,16 @@
 <template>
     <el-scrollbar>
-        <el-card shadow="never" v-loading="loading">
+        <el-card shadow="never" v-loading="loading" id="namelist">
             <template #header>
                 <div class="card-header">
                     <span>{{ lrcStore.data[0] }}</span>
-                    <el-button class="button" type="text">复制</el-button>
+                    <el-button
+                        class="button"
+                        type="text"
+                        v-clipboard:error="copyError"
+                        v-clipboard:success="copySuccess"
+                        v-clipboard:target="'#namelist'"
+                    >复制</el-button>
                 </div>
             </template>
             <name-list :data="lrcStore.data"></name-list>
@@ -13,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from '@vue/reactivity';
 import { onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useLrcStore } from '../stores/lrc';
@@ -31,6 +38,16 @@ watch(
     () => route.path,
     async path => fetchLrc(path)
 )
+
+const copyText = computed(() => lrcStore.data.join('\n'));
+
+function copySuccess(e: Event) {
+    console.log('success', e);
+}
+
+function copyError(e: Event) {
+    console.error('errocopyError', e);
+}
 
 onMounted(() => fetchLrc(route.path));
 </script>

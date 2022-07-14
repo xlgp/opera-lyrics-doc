@@ -11,7 +11,7 @@
 import { computed } from '@vue/reactivity';
 import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { useNameListStore } from '../stores/nameList'
+import { useNameListStore } from '@/stores/nameList'
 import RouterLinkList from './RouterLinkList.vue';
 import FilterInput from './FilterInput.vue';
 
